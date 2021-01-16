@@ -6,7 +6,7 @@
 /*   By: ylagtab <ylagtab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/25 10:23:55 by ylagtab           #+#    #+#             */
-/*   Updated: 2020/10/22 11:30:04 by ylagtab          ###   ########.fr       */
+/*   Updated: 2021/01/16 16:59:56 by ylagtab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static int		parse_options(char **av)
 	{
 		if (av[i][0] == '-' && av[i][1] == '-' && av[i][2] == '\0')
 			return (i + 1);
-		if (av[i][0] == '-')
+		if (av[i][0] == '-' && av[i][1] != '\0')
 			parse_opt(av[i] + 1);
 		else
 			return (i);
